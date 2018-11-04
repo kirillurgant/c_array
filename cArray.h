@@ -23,4 +23,20 @@ void printArr(int *arr, const int SIZE) {
   printf("\n");
 }
 
+int *cloneArray(int *arr, const int SIZE) {
+  int *newArr = (int*)calloc(SIZE, sizeof(int));
+
+  for (int i = 0; i < SIZE; i++) {
+    newArr[i] = arr[i];
+  }
+
+  return newArr;
+}
+
+void pushArr(int *arr, int *size, int val) {
+  *size = *size + 1;
+  arr = realloc(arr, sizeof(int) * *size);
+  arr[*size - 1] = val;
+};
+
 #endif /* ARRAY_H_ */
