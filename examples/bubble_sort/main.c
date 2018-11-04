@@ -10,8 +10,8 @@ int main(int argc, char const *argv[]) {
   printArr(arr, SIZE);
 
   for (int i = 0; i < SIZE; i++) {
-    for (int j = 0; j < SIZE; j++) {
-      if (arr[j] < arr[j - 1]) swap(&arr[j], &arr[j - 1]);
+    for (int j = 0; j < SIZE - 1; j++) {
+      if (arr[j] > arr[j + 1]) swap(&arr[j], &arr[j + 1]);
     }
   }
 
